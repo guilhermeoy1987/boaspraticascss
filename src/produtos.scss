@@ -1,0 +1,54 @@
+// Bloco principal de produtos
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 40px;
+    background-color: #590fd1; // fundo prata clara da página
+
+    &__item {
+        background-color: #dcdcdc; // fundo prata dos cards
+        border-radius: 10px;
+        padding: 20px;
+        width: 260px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid transparent; // borda padrão invisível
+
+        &:hover {
+            border-color: #003087; // borda azul escuro ao passar o mouse
+        }
+
+        &:active {
+            .produtos__nome,
+            .produtos__descricao {
+                color: #003087; // texto azul escuro ao clicar
+            }
+        }
+
+        &--destaque {
+            border: 2px solid #003087; // destaque permanente para o item destacado
+        }
+    }
+
+    &__imagem {
+        display: block;
+        margin: 0 auto 16px; // centraliza a imagem
+        max-width: 100%;
+    }
+
+    &__nome {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #000; // preto para contraste
+        transition: color 0.3s ease;
+    }
+
+    &__descricao {
+        font-size: 14px;
+        color: #333; // cinza escuro
+        transition: color 0.3s ease;
+    }
+}
