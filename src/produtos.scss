@@ -4,51 +4,48 @@
     justify-content: center;
     gap: 32px;
     padding: 40px;
-    background-color: #590fd1; // fundo prata clara da página
+    background-color: #3b00b9; // Ajustado para o roxo da imagem
 
     &__item {
-        background-color: #dcdcdc; // fundo prata dos cards
+        background-color: #dcdcdc;
         border-radius: 10px;
         padding: 20px;
         width: 260px;
         text-align: center;
         cursor: pointer;
         transition: all 0.3s ease;
-        border: 2px solid transparent; // borda padrão invisível
+        border: 7px  solid transparent; // Borda levemente mais grossa para aparecer bem
+        outline: none; // Remove o contorno padrão do navegador
 
-        &:hover {
-            border-color: #003087; // borda azul escuro ao passar o mouse
-        }
-
-        &:active {
-            .produtos__nome,
-            .produtos__descricao {
-                color: #003087; // texto azul escuro ao clicar
-            }
+        // Ajuste para a borda dourada ao clicar ou focar
+        &:focus, &:active {
+            border-color: #ffd700; // Dourado da imagem
         }
 
         &--destaque {
-            border: 2px solid #003087; // destaque permanente para o item destacado
+            // Se quiser que o item do meio já comece com a borda:
+            // border-color: #ffd700; 
         }
     }
 
     &__imagem {
         display: block;
-        margin: 0 auto 16px; // centraliza a imagem
+        margin: 0 auto 16px;
         max-width: 100%;
+        border-radius: 4px; // Suaviza as bordas da imagem branca
     }
 
     &__nome {
+        font-family: sans-serif; // Fonte similar à imagem
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 8px;
-        color: #000; // preto para contraste
-        transition: color 0.3s ease;
+        color: #000;
     }
 
     &__descricao {
+        font-family: sans-serif;
         font-size: 14px;
-        color: #333; // cinza escuro
-        transition: color 0.3s ease;
+        color: #666;
     }
 }
