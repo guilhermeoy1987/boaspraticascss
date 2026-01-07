@@ -1,11 +1,12 @@
-// Bloco principal de produtos
+// Bloco: produtos
 .produtos {
     display: flex;
     justify-content: center;
     gap: 32px;
     padding: 40px;
-    background-color: #3b00b9; // Ajustado para o roxo da imagem
+    background-color: #3b00b9;
 
+    // Elemento: item
     &__item {
         background-color: #dcdcdc;
         border-radius: 10px;
@@ -14,17 +15,18 @@
         text-align: center;
         cursor: pointer;
         transition: all 0.3s ease;
-        border: 7px  solid transparent; // Borda levemente mais grossa para aparecer bem
-        outline: none; // Remove o contorno padrão do navegador
+        border: 7px solid transparent; 
+        outline: none;
 
-        // Ajuste para a borda dourada ao clicar ou focar
+        // Comportamento de foco/clique
         &:focus, &:active {
-            border-color: #ffd700; // Dourado da imagem
+            border-color: #ffd700;
         }
 
+        // Modificador: destaque (CORRIGIDO PARA SINTAXE SASS)
         &--destaque {
-            // Se quiser que o item do meio já comece com a borda:
-            // border-color: #ffd700; 
+            border-color: #ffd700;
+            transform: scale(1.05); // Pequeno zoom para destacar
         }
     }
 
@@ -32,11 +34,11 @@
         display: block;
         margin: 0 auto 16px;
         max-width: 100%;
-        border-radius: 4px; // Suaviza as bordas da imagem branca
+        border-radius: 4px;
     }
 
     &__nome {
-        font-family: sans-serif; // Fonte similar à imagem
+        font-family: sans-serif;
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 8px;
