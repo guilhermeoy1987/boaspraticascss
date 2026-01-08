@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* Reset básico */
+
+/* RESET */
 *,
 *::before,
 *::after {
@@ -8,12 +9,14 @@
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: Arial, sans-serif;
   background-color: #1602cc;
   color: #fff;
 }
 
+/* BLOCK */
 .produtos {
   display: flex;
   justify-content: center;
@@ -21,6 +24,8 @@ body {
   padding: 40px;
   background-color: #3b00b9;
 }
+
+/* ELEMENT */
 .produtos__item {
   background-color: #dcdcdc;
   border-radius: 10px;
@@ -28,30 +33,41 @@ body {
   width: 260px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
   border: 7px solid transparent;
   outline: none;
 }
-.produtos__item:focus, .produtos__item:active {
+
+/* CLICK / FOCO */
+.produtos__item:active,
+.produtos__item:focus {
+  background-color: #ffff42;
   border-color: #ffd700;
 }
+
+/* HOVER (opcional, sem fundo) */
+.produtos__item:hover {
+  border-color: #ffd700;
+}
+
+/* ELEMENT */
 .produtos__imagem {
   display: block;
   margin: 0 auto 16px;
   max-width: 100%;
   border-radius: 4px;
 }
+
+/* ELEMENT */
 .produtos__nome {
-  font-family: sans-serif;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
   color: #000;
 }
+
+/* ELEMENT */
 .produtos__descricao {
-  font-family: sans-serif;
   font-size: 14px;
   color: #666;
 }
-
-/*# sourceMappingURL=style.css.map */
