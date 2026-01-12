@@ -1,40 +1,73 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+@charset "UTF-8";
+
+/* 1. RESET: Padrão para evitar diferenças entre navegadores */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* BLOCK */
+/* 2. BASE: Estilos globais */
+body {
+  font-family: sans-serif;
+  background-color: #1602cc;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* 3. BLOCK: Container principal */
 .produtos {
-    max-width: 640px;
-    width: 100%;
-    margin: 56px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+  max-width: 960px; 
+  width: 100%;
+  margin: 56px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 20px;
 }
 
-/* ELEMENT */
+/* 4. ELEMENT: Item individual */
 .produtos__item {
-    text-align: center;
-    padding: 8px;
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  border: 4px solid transparent;
+  color: #333; /* Texto escuro para contraste no fundo claro */
 }
 
-/* ELEMENT */
-.produtos__nome {
-    font-size: 1.2em;
-    margin-bottom: 4px;
+.produtos__item:hover {
+  border-color: #ffd700;
+  transform: translateY(-5px);
 }
 
-/* ELEMENT */
-.produtos__descricao {
-    color: gray;
-}
-
-/* MODIFIER */
+/* 5. MODIFIER: Variação de destaque (BEM) */
 .produtos__item--destaque {
-    background-color: #ffff42;
-    border: 2px solid gold;
-    padding: 16px;
+  background-color: #ffff42;
+  border: 4px solid gold;
+  transform: scale(1.05); 
+}
+
+/* 6. ELEMENTS: Partes internas do item */
+.produtos__imagem {
+  display: block;
+  margin: 0 auto 16px;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.produtos__nome {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.produtos__descricao {
+  font-size: 14px;
+  color: #666;
 }
